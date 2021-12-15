@@ -14,7 +14,7 @@ def failure_color(){
 
 def success_build(){
    slackSend(
-        color: success_color()
+        color: success_color(),
         message: "Build Successful - Job Name:${env.JOB_NAME}  Build Number:${env.BUILD_NUMBER}  Build URL:(<${env.BUILD_URL}|Open>)"
    )
 }
