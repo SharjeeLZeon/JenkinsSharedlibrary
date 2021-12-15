@@ -26,21 +26,3 @@ def build_failure(){
    )
 }
 
-def build_status(Map config = [:]){
-    if(option == 1){
-   slackSend(
-        color: success_color(),
-        message: "${config.message} - Job Name:${env.JOB_NAME}  Build Number:${env.BUILD_NUMBER}  Build URL:(<${env.BUILD_URL}|Open>)"
-   )
-    }
-    else{
-   slackSend(
-        color: failure_color(),
-        message: "${config.message} - Job Name:${env.JOB_NAME}  Build Number:${env.BUILD_NUMBER}  Build URL:(<${env.BUILD_URL}|Open>)"
-   )
-    }
-}
-
-def always_case(Map config = [:]){
-    slackSend message: "${config.message}"
-}
