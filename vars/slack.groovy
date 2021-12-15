@@ -10,6 +10,6 @@ def failure_color(){
     return 'FF0000'
 }
 
-def success_build(job_name, build_num, url){
-   message: "Build Successful - Job Name:${job_name}  Build Number:${build_num}  Build URL:(<${url}|Open>)"
+def success_build(){
+   message: "Build Successful - Job Name:${env.JOB_NAME}  Build Number:${env.BUILD_NUMBER}  Build URL:(<${env.BUILD_URL}|Open>)"
 }
