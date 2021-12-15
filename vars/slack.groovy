@@ -1,7 +1,7 @@
 
 
 def slack_username(name){
-    slackSend: message "UserName: ${name}"
+    slackSend message: "UserName: ${name}"
 }
 
 def success_color(){
