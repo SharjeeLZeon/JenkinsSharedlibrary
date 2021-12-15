@@ -42,5 +42,5 @@ def build_status(Map config = [:]){
 }
 
 def always_case(Map config = [:]){
-    slackSend message: ${config.message}
+    slackSend message: "${config.message}"
 }
