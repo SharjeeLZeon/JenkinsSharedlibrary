@@ -1,19 +1,19 @@
 def call(int options){
     switch(options){
         case 1:
-            return "terraform init";
-                
+            sh 'terraform init'
+            break;  
         case 2:
-            return "terraform plan";
-                
+            sh 'terraform plan'
+            break; 
         case 3:
-            return "terraform apply --auto-approve";
-                
+            sh 'terraform apply --auto-approve'
+            break;
         case 4:
-            return "terraform destroy --auto-approve";
-                
+            sh 'terraform destroy --auto-approve'
+            break;  
         default:
-            return "invalid choice";
-                
+            sh "echo invalid choice"
+            break;
         }
 }
