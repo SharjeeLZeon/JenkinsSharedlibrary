@@ -49,6 +49,6 @@ def build_status(Map config = [:]){
     }
 }
 
-def stage_message(Map config = [:]){
+def display_message(Map config = [:]){
     slackSend message: "${config.message}"
 }
