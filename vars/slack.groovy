@@ -1,3 +1,5 @@
+
+
 def slack_username(){
     return "sharjeel"
 }
@@ -11,5 +13,5 @@ def failure_color(){
 }
 
 def success_build(){
-   message: "Build Successful - Job Name:${env.JOB_NAME}  Build Number:${env.BUILD_NUMBER}  Build URL:(<${env.BUILD_URL}|Open>)"
+   slackSend message: "Build Successful - Job Name:${env.JOB_NAME}  Build Number:${env.BUILD_NUMBER}  Build URL:(<${env.BUILD_URL}|Open>)"
 }
